@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # added
     "accounts",
     "realtors",
+    "listings",
     "corsheaders",
     "rest_framework",
 ]
