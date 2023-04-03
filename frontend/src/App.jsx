@@ -1,5 +1,9 @@
 function App() {
-  <h1 className="text-red-400 text-3xl font-bold">Real Estate App</h1>;
+  return (
+    <main>
+      <h1>Real Estate App</h1>
+    </main>
+  );
 }
 
 export default App;
