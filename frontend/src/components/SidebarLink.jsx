@@ -5,7 +5,7 @@ const SidebarLink = () => {
   const location = useLocation();
 
   return (
-    <section className="flex flex-col justify-between items-center h-full py-4 text-white">
+    <section className="flex flex-col justify-between items-center h-full py-4 text-black">
       {/* nav links */}
       <nav>
         <ul className="flex items-center flex-col gap-8">
@@ -31,7 +31,7 @@ const SidebarLink = () => {
       {/* authentication link */}
       <Link
         to="/register"
-        className="px-10 py-2 bg-blue-500 rounded hover:scale-105 font-semibold"
+        className="px-10 py-2 bg-blue-500 rounded hover:scale-105 font-semibold text-white"
       >
         Register
       </Link>

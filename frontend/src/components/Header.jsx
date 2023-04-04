@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full h-[70px] bg-[#dc7ce3] text-white z-50">
+      <header className="fixed top-0 left-0 w-full h-[70px] bg-white text-black z-50 shadow">
         <div className="h-full flex items-center justify-between max-w-7xl mx-auto px-3">
           {/* logo */}
           <div className="flex items-center gap-2">
@@ -53,7 +53,7 @@ const Header = () => {
           {/* authentication link */}
           <Link
             to="/register"
-            className="px-10 py-2 bg-blue-500 rounded hover:scale-105 font-semibold hidden lg:inline"
+            className="px-10 py-2 bg-blue-500 rounded hover:scale-105 font-semibold hidden lg:inline text-white"
           >
             Register
           </Link>
@@ -68,7 +68,7 @@ const Header = () => {
 
       {/* nav and authentication links for small screen devices */}
       <div
-        className={`fixed top-[70px] w-[200px] bottom-0 bg-[#dc7ce3] lg:hidden ${
+        className={`fixed top-[70px] w-[200px] bottom-0 bg-[#e7f2e3]  shadow-lg lg:hidden  ${
           isSidebarOpen
             ? "left-0 duration-[1s]"
             : "left-[-999px] duration-[1.8s]"
