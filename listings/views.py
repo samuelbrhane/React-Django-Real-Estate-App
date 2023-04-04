@@ -25,7 +25,7 @@ class SearchView(APIView):
         queryset = Listing.objects.order_by("-list_date").filter(is_published=True)
         data = self.request.data
         
-        sale_type = data["sale-type"]
+        sale_type = data["sale_type"]
         queryset = queryset.filter(sale_type__iexact=sale_type)
         
         price = data["price"]
@@ -68,7 +68,7 @@ class SearchView(APIView):
         queryset = queryset.filter(bedrooms__gte=bedrooms)
         
         home_type = data["home_type"]
-        queryset = queryset.filter(home_type_iexact=home_type)
+        queryset = queryset.filter(home_type__iexact=home_type)
         
         bathrooms = data["bathrooms"]
         if bathrooms == "0+":
@@ -87,8 +87,8 @@ class SearchView(APIView):
         queryset = queryset.filter(bathrooms__gte=bathrooms)
         
         sqm = data["sqm"]
-        if sqm == "90+":
-            sqm = 90.00
+        if sqm == "50+":
+            sqm = 50.00
         elif sqm == "150+":
             sqm = 150.00
         elif sqm == "200+":
@@ -140,6 +140,6 @@ class SearchView(APIView):
         keywords = data["keywords"]
         queryset = queryset.filter(description__icontains=keywords)
         
-        serializer = ListSerializer(queryset,many=True)
+        serializer = ListingSerializer(queryset,many=True)
         return Response(serializer.data)
         
