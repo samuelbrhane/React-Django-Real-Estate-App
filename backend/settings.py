@@ -45,9 +45,18 @@ INSTALLED_APPS = [
     "accounts",
     "realtors",
     "listings",
+    "contacts",
     "corsheaders",
     "rest_framework",
 ]
+
+
+EMAIL_BACKEND = "dajango.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST')
+EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD') 
+EMAIL_USE_TLS = True
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
