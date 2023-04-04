@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .link {
+    @apply hover:text-[#21164f] hover:scale-110 hover:font-[Alkatra];
+  }
+  .active {
+    @apply text-[#164f1d] font-[Alkatra] pt-1;
+  }
+}
